@@ -8,7 +8,7 @@ const Service = ({ service }) => {
       
 <div className="w-full max-w-sm bg-white border hover:border-pink-700 rounded-lg shadow  hover:scale-105 duration-300 ">
     <a href="#">
-        <img className="p-8 rounded-t-lg " src={image} alt="product image" />
+        <img className="p-8 rounded-t-lg hover:scale-105 duration-300 " src={image} alt="product image" />
     </a>
     <div className="px-5 pb-5">
         <a href="#">

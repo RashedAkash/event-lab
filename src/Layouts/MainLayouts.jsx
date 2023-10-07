@@ -6,7 +6,9 @@ import Footer from '../components/Footer/Footer';
 const MainLayouts = () => {
   return (
     <div>
-      <Navbar />
+      <div className=' relative z-10'>
+        <Navbar />
+      </div>
       <Outlet />
       <Footer />
     </div>

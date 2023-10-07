@@ -5,30 +5,36 @@ export const FirebaseContext = createContext(null);
 
 const AuthContext = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
   const googleProvider = new GoogleAuthProvider();
   //google
   const googleSignUp = () => {
+    setLoading(true)
     return signInWithPopup(auth, googleProvider)
   }
 
   // ‍sign up
-  const signUp = (email,password) => {
+  const signUp = (email, password) => {
+    setLoading(true)
     return createUserWithEmailAndPassword(auth, email, password)
   }
 
   // ‍sign in
-  const signIn = (email,password) => {
+  const signIn = (email, password) => {
+    setLoading(true)
   return  signInWithEmailAndPassword(auth, email, password)
   }
   //manage user
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       setUser(user);
+      setLoading(false)
     });
   }, []);
 
   //log out
   const LogOut = () => {
+    setLoading(true)
     return signOut(auth);
   };
 
@@ -40,7 +46,8 @@ const AuthContext = ({ children }) => {
     signUp,
     signIn,
     user,
-    LogOut
+    LogOut,
+    loading
   }
   return (
     <FirebaseContext.Provider value={authInfo}>

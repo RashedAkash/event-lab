@@ -4,7 +4,7 @@ import moment from 'moment'
 
 const Banner = () => {
   return (
-    <div className='bg-gradient-to-b from-white  to-pink-300'>
+    <div className='bg-gradient-to-t  from-white  to-pink-300'>
       <div className="hero min-h-screen" >
   <div className=""></div>
   <div className="hero-content text-center text-neutral-content">
@@ -13,11 +13,11 @@ const Banner = () => {
   <div className="hero-content lg:gap-20  flex-col lg:flex-row-reverse">
                 <img src={ heroImg} className=" rounded-lg " />
                 <div>
-                  <p className='text-gray-600 text-xl flex items-center justify-center gap-2 mb-2'>
+                  <p className='text-gray-800 text-xl flex items-center  gap-2 mb-2'>
                     <FaCalendar />
-                    {moment().format('MMMM Do YYYY')}
+                    {moment().format('MMMM, Do YYYY')}
                   </p>
-                  <h1 className="text-2xl md:text-4xl lg:text-5xl leading-relaxed  text-gray-600 uppercase font-bold">Events,meetups  </h1>
+                  <h1 className="text-2xl md:text-4xl lg:text-5xl leading-relaxed  text-gray-800 uppercase font-bold">Events,meetups  </h1>
                   <h1 className="text-2xl md:text-4xl lg:text-5xl mt-3 mb-10 leading-relaxed  text-gray-600 uppercase font-bold"> & <span className=' text-pink-700'>conferences</span></h1>
                   <div className='flex gap-24 mt-5 '>
                     <div className='flex items-center gap-3'>

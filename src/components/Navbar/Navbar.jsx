@@ -7,7 +7,7 @@ const Navbar = () => {
   const { name } = useContext(FirebaseContext);
   return (
     <div>
-      <div className="navbar ">
+      <div className="navbar pb-5">
         <div className="navbar-start">
          
     <div className="dropdown">

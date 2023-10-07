@@ -4,7 +4,8 @@ import { FirebaseContext } from '../../Context/AuthContext';
 import Swal from 'sweetalert2'
 
 const SignUp = () => {
-    const [error, setError] = useState(null);
+    const [error, setError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
     const { googleSignUp,signUp } = useContext(FirebaseContext);
     //google
     const handleGoogle = () => {
@@ -38,6 +39,24 @@ const SignUp = () => {
         const photo = e.target.photo.value;
         e.target.reset()
         console.log(email, name, password, photo);
+        setError('')
+        setPasswordError('')
+
+        
+
+
+        if (password.length < 6) {
+            setError('Password should be at least 6 characters or longer')
+            
+            return;   
+        }
+        
+        
+        if (!/[A-Z]/.test(password)) {
+            setPasswordError('Your password should have at least one upper case characters and one special character.')
+            return;     
+        }
+       
 
         
         
@@ -67,7 +86,12 @@ const SignUp = () => {
     <div className=' flex justify-center py-10'>
       <div className="grid max-w-md w-full gap-6 px-12 max-sm:px-6 py-8 rounded-lg dark:text-zinc-100 text-zinc-800 sm:ring-1 ring-zinc-300 dark:ring-zinc-800 m-4 bg-[#fafafa] dark:bg-gray-900">
               <h2 className="text-4xl font-bold my-4 mb-6">Sign up</h2>
-              
+              {
+                  error && <p className='text-red-800'>{error }</p>
+              }
+              {
+                  passwordError && <p className='text-red-800'>{passwordError }</p>
+              }
               <form onSubmit={handleSubmit} >
                   <div className="grid gap-1 w-full dark:text-gray-200">
         <label for="name" className="">Full Name</label>

@@ -1,9 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { FirebaseContext } from '../../Context/AuthContext';
 import Swal from 'sweetalert2'
 
 const Login = () => {
+  const [error, setError] = useState('');
   const location = useLocation();
   const navigate = useNavigate();
   console.log(location);
@@ -21,7 +22,8 @@ const Login = () => {
 })
             })
             .catch(error => {
-                console.log(error);
+              console.log(error);
+              
                 Swal.fire({
   title: 'Error!',
   text: 'Do you want to continue',
@@ -36,7 +38,8 @@ const Login = () => {
         const email = e.target.email.value;       
         const password = e.target.password.value;
        
-        e.target.reset()
+     e.target.reset()
+     setError('')
         console.log(email,  password, );
 
         
@@ -68,7 +71,10 @@ const Login = () => {
   return (
     <div className=' flex justify-center py-10'>
      <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-gray-100">
-	<h1 className="text-2xl font-bold text-center">Login</h1>
+        <h1 className="text-2xl font-bold text-center">Login</h1>
+        {
+          error && <p className=' text-red-800'>{error }</p>
+        }
 	<form onSubmit={handleSubmit} novalidate="" action="" className="space-y-6">
 		<div className="space-y-1 text-sm">
 			<label for="username" className="block dark:text-gray-400">Email</label>

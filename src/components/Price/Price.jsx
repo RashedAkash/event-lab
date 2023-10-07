@@ -16,7 +16,7 @@ const Price = () => {
           <div className="grid max-w-md grid-cols-1 gap-6 mx-auto auto-rows-fr lg:grid-cols-3 lg:max-w-full">
             
 			<div className="flex flex-col overflow-hidden  border rounded-md dark:border-pink-700">
-				<div className="flex flex-col items-center justify-center px-2 py-8 space-y-4 hover:bg-gray-800 dark:bg-pink-700 transition duration-30">
+				<div className="flex flex-col items-center justify-center px-2 py-8 space-y-4 hover:bg-gray-800 dark:bg-pink-700 transition duration-300">
 					<p className="text-2xl text-white font-medium">Silver</p>
 					<p className="text-5xl font-bold">$
 						<span className="text-xl dark:text-white">/100</span>
@@ -47,11 +47,11 @@ const Price = () => {
 							<span className='text-gray-500 text-xl'>Free Lunch & Coffe</span>
 						</li>
 					</ul>
-					<button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-pink-700 hover:bg-gray-800 transition duration-30dark:text-white">Buy Ticket</button>
+					<button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-pink-700 hover:bg-gray-800 transition duration-300 dark:text-white">Buy Ticket</button>
 				</div>
 			</div>
 			<div className="flex flex-col overflow-hidden  border rounded-md dark:border-pink-700">
-				<div className="flex flex-col items-center justify-center px-2 py-8 space-y-4 hover:bg-gray-800 dark:bg-pink-700 transition duration-30">
+				<div className="flex flex-col items-center justify-center px-2 py-8 space-y-4 hover:bg-gray-800 dark:bg-pink-700 transition duration-300">
 					<p className="text-2xl text-white font-medium">Gold</p>
 					<p className="text-5xl font-bold">$
 						<span className="text-xl dark:text-white">/120</span>
@@ -82,11 +82,11 @@ const Price = () => {
 							<span className='text-gray-500 text-xl'>Free Lunch & Coffe</span>
 						</li>
 					</ul>
-					<button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-pink-700 hover:bg-gray-800 transition duration-30dark:text-white">Buy Ticket</button>
+					<button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-pink-700 hover:bg-gray-800 transition duration-300 dark:text-white">Buy Ticket</button>
 				</div>
 			</div>
 			<div className="flex flex-col overflow-hidden  border rounded-md dark:border-pink-700">
-				<div className="flex flex-col items-center justify-center px-2 py-8 space-y-4 hover:bg-gray-800 dark:bg-pink-700 transition duration-30">
+				<div className="flex flex-col items-center justify-center px-2 py-8 space-y-4 hover:bg-gray-800 dark:bg-pink-700 transition duration-300">
 					<p className="text-2xl text-white font-medium">Platinum</p>
 					<p className="text-5xl font-bold">$
 						<span className="text-xl dark:text-white">/150</span>
@@ -117,7 +117,7 @@ const Price = () => {
 							<span className='text-gray-500 text-xl'>Free Lunch & Coffe</span>
 						</li>
 					</ul>
-					<button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-pink-700 hover:bg-gray-800 transition duration-30dark:text-white">Buy Ticket</button>
+					<button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-pink-700 hover:bg-gray-800 transition duration-300  dark:text-white">Buy Ticket</button>
 				</div>
 			</div>
 		</div>

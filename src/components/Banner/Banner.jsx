@@ -4,7 +4,7 @@ import moment from 'moment'
 
 const Banner = () => {
   return (
-    <div className='bg-gradient-to-b from-white py-16 to-pink-300'>
+    <div className='bg-gradient-to-b from-white  to-pink-300'>
       <div className="hero min-h-screen" >
   <div className=""></div>
   <div className="hero-content text-center text-neutral-content">

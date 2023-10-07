@@ -7,6 +7,7 @@ import Login from "../components/Login/Login";
 import SignUp from "../components/SignUp/SignUp";
 import Contact from "../Pages/Contact/Contact";
 import ServiceDetails from "../Pages/ServiceDetails/ServiceDetails";
+import PrivateRoutes from "./PrivateRoutes";
 
 export const router = createBrowserRouter([
   {
@@ -20,15 +21,15 @@ export const router = createBrowserRouter([
       },
       {
         path: '/about',
-        element:<About />
+        element:<PrivateRoutes><About /></PrivateRoutes>
       },
       {
         path: '/blog',
-        element:<Blog />
+        element:<PrivateRoutes><Blog /></PrivateRoutes>
       },
       {
         path: '/contact',
-        element:<Contact />
+        element:<PrivateRoutes><Contact /></PrivateRoutes>
       },
       {
         path: '/login',
@@ -40,7 +41,7 @@ export const router = createBrowserRouter([
       },
       {
         path: '/details/:id',
-        element: <ServiceDetails />,
+        element: <PrivateRoutes><ServiceDetails /></PrivateRoutes>,
         loader:()=> fetch('/data.json')
       },
     ]

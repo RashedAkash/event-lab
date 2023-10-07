@@ -24,7 +24,7 @@ const ServiceDetails = () => {
               <h3 className="text-3xl font-bold">{data.name }</h3>
               <h3 className="text-3xl font-bold text-pink-700 mt-8">Price : {data.price }</h3>
               <p className="my-6 dark:text-gray-400">{data.description }</p>
-              <div>
+              <div className='flex gap-5 justify-center'>
                 <button type="button" className="self-start btn border-none text-white bg-pink-700">Book Now</button>
                 <Link to='/'>
                   <button type="button" className="self-start ml-10 btn border-none text-white bg-pink-700">Back to Home</button>

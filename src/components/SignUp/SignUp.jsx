@@ -1,12 +1,14 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FirebaseContext } from '../../Context/AuthContext';
 import Swal from 'sweetalert2'
+
 
 const SignUp = () => {
     const [error, setError] = useState('');
     const [passwordError, setPasswordError] = useState('');
-    const { googleSignUp,signUp } = useContext(FirebaseContext);
+    const { googleSignUp, signUp, handleUpdateProfile } = useContext(FirebaseContext);
+    const navigate = useNavigate();
     //google
     const handleGoogle = () => {
         googleSignUp()
@@ -57,30 +59,60 @@ const SignUp = () => {
             return;     
         }
        
-
-        
-        
-        // signUp
-        signUp(email,password)
+   // creating a new user
+        signUp(email, password)
             .then(res => {
-                console.log(res.user);
-                   Swal.fire({
+                handleUpdateProfile(name, photo)
+                    .then(() => {
+                        console.log('update');
+                         Swal.fire({
   title: 'Congratulation!',
   text: 'You are Sign up successfully',
   icon: 'success',
   confirmButtonText: 'Well-done'
-})
+                   })
+                        navigate('/')
+
+                    })
             })
             .catch(error => {
-                console.error(error.message);
-                setError(error.message)
-                 Swal.fire({
+              
+  Swal.fire({
   icon: 'error',
   title: 'Oops...',
   text: 'Something went wrong!',
   
-})
-        })
+})  
+            })
+        
+        
+        // signUp
+//         signUp(email,password)
+//             .then(res => {
+                              
+                      
+//                        updateProfile(name,photo)
+//                         .then(() => {
+//                              Swal.fire({
+//   title: 'Congratulation!',
+//   text: 'You are Sign up successfully',
+//   icon: 'success',
+//   confirmButtonText: 'Well-done'
+//                    })
+//                         })
+//                            .catch((error) => {
+//   Swal.fire({
+//   icon: 'error',
+//   title: 'Oops...',
+//   text: 'Something went wrong!',
+  
+// })
+//                                 });
+
+                
+                
+//             })
+            
     }
   return (
     <div className=' flex justify-center py-10'>

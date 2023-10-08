@@ -6,7 +6,7 @@ import pImg from '../../assets/team6-02.jpg'
 
 const Navbar = () => {
   const { user, LogOut } = useContext(FirebaseContext);
-  
+  console.log(user);
   const handleLogout = () => {
     LogOut()
       .then(() => {
@@ -51,12 +51,12 @@ const Navbar = () => {
                         user?.email ? <div className="dropdown dropdown-end ">
                             <label tabIndex={0} className="btn bg-gray-400 btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
-                                    <img src={pImg} alt="Akash" />
+                                    <img src={user.photoURL} alt="Akash" />
                                 </div>
                             </label>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box bg-gray-400  w-52">
                                 <li>
-                                    <button className="btn text-black btn-sm  btn-ghost">Rashed</button>
+                  <button className="btn text-black btn-sm  btn-ghost">{user.displayName }</button>
 
                                 </li>
                                 <li>

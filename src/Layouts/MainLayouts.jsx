@@ -5,8 +5,8 @@ import Footer from '../components/Footer/Footer';
 
 const MainLayouts = () => {
   return (
-    <div>
-      <div className=' sticky top-0 left-0 bg-white z-50'>
+    <div className=' max-w-[1140px] mx-auto'>
+      <div className=' sticky top-0 left-0  bg-white z-50'>
         <Navbar />
       </div>
       <Outlet />

@@ -22,7 +22,7 @@ const Banner = () => {
   <div className="hero-content lg:gap-20  flex-col lg:flex-row-reverse">
                 <img data-aos="flip-left" src={heroImg} className=" rounded-lg " />
                 {/* text */}
-                  <div data-aos="fade-right">
+                  <div data-aos="fade-down">
                   <p className='text-gray-800 text-xl flex items-center  gap-2 mb-2'>
                     <FaCalendar />
                     {moment().format('MMMM, Do YYYY')}

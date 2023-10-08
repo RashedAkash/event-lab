@@ -1,8 +1,17 @@
 import heroImg from '../../assets/hero.png';
 import { FaCalendar, FaLandmark, FaLocationArrow, FaMicrophone, FaPersonBooth } from "react-icons/fa";
-import moment from 'moment'
+import moment from 'moment';
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+import { useEffect } from 'react';
 
 const Banner = () => {
+  useEffect(() => {
+    AOS.init(
+      { duration: 2000 },
+      { offset: 300 }
+    );
+  }, []);
   return (
     <div className='bg-gradient-to-t  from-white  to-pink-300'>
       <div className="hero min-h-screen" >
@@ -11,8 +20,9 @@ const Banner = () => {
     <div className="">
       <div className="hero min-h-screen ">
   <div className="hero-content lg:gap-20  flex-col lg:flex-row-reverse">
-                <img src={ heroImg} className=" rounded-lg " />
-                <div>
+                <img data-aos="flip-left" src={heroImg} className=" rounded-lg " />
+                {/* text */}
+                  <div data-aos="fade-right">
                   <p className='text-gray-800 text-xl flex items-center  gap-2 mb-2'>
                     <FaCalendar />
                     {moment().format('MMMM, Do YYYY')}
@@ -38,6 +48,8 @@ const Banner = () => {
                     <button className='btn text-pink-700  border-2 border-pink-700 font-bold bg-pink-200'>View Details</button>
       </div>
     </div>
+                
+              
   </div>
 </div>
     </div>

@@ -1,19 +1,28 @@
+import { useEffect } from 'react';
 import tImg1 from '../../assets/Team-memeber-01.png';
 import tImg2 from '../../assets/Team-memeber-2-.png'
 import tImg3 from '../../assets/team-3.jpeg';
 import tImg4 from '../../assets/team4.jpeg';
 import tImg5 from '../../assets/team5.jpeg';
 import tImg6 from '../../assets/team6-02.jpg';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Team = () => {
+	useEffect(() => {
+		AOS.init(
+			{ duration: 2000 },
+			{offset:300}
+		)
+	},[])
   return (
     <div>
       <section className="py-6 dark:bg-gray-100 dark:text-gray-100">
-	<div className="container flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
-		<p className="p-2 text-pink-700 text-2xl font-semibold  text-center uppercase">Speaker</p>
-		<h1 className="text-4xl text-black font-bold  text-center sm:text-5xl">TALENTED SPEAKER</h1>
+	<div  className="container flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
+		<p data-aos="fade-up" className="p-2 text-pink-700 text-2xl font-semibold  text-center uppercase">Speaker</p>
+		<h1 data-aos="flip-left" className="text-4xl text-black font-bold  text-center sm:text-5xl">TALENTED SPEAKER</h1>
 		<div className="flex flex-row flex-wrap-reverse justify-center mt-8">
-			<div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 hover:text-white xl:w-64 dark:bg-white hover:bg-pink-700 transition duration-700 dark:text-gray-800">
+			<div data-aos="fade-right" className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 hover:text-white xl:w-64 dark:bg-white hover:bg-pink-700 transition duration-700 dark:text-gray-800">
 				<img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full dark:bg-gray-500" src={tImg1} />
 				<div className="flex-1 my-4">
 					<p className="text-xl font-semibold leadi">Leroy Jenkins</p>
@@ -43,7 +52,7 @@ const Team = () => {
 					</a>
 				</div>
 			</div>
-			<div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 hover:text-white xl:w-64 dark:bg-white hover:bg-pink-700 transition duration-700 dark:text-gray-800">
+			<div data-aos="fade-up" className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 hover:text-white xl:w-64 dark:bg-white hover:bg-pink-700 transition duration-700 dark:text-gray-800">
 				<img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full dark:bg-gray-500" src={tImg2} />
 				<div className="flex-1 my-4">
 					<p className="text-xl font-semibold leadi">David Malan</p>
@@ -73,7 +82,7 @@ const Team = () => {
 					</a>
 				</div>
 			</div>
-			<div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 hover:text-white xl:w-64 dark:bg-white hover:bg-pink-700 transition duration-700 dark:text-gray-800">
+			<div data-aos="fade-left" className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 hover:text-white xl:w-64 dark:bg-white hover:bg-pink-700 transition duration-700 dark:text-gray-800">
 				<img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full dark:bg-gray-500" src={tImg3} />
 				<div className="flex-1 my-4">
 					<p className="text-xl font-semibold leadi">Mitchel Starc</p>
@@ -103,7 +112,7 @@ const Team = () => {
 					</a>
 				</div>
 			</div>
-			<div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 hover:text-white dark:bg-white hover:bg-pink-700 transition duration-700 dark:text-gray-800">
+			<div data-aos="fade-right" className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 hover:text-white dark:bg-white hover:bg-pink-700 transition duration-700 dark:text-gray-800">
 				<img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full dark:bg-gray-500" src={tImg4} />
 				<div className="flex-1 my-4">
 					<p className="text-xl font-semibold leadi">Devon Conway</p>
@@ -133,7 +142,7 @@ const Team = () => {
 					</a>
 				</div>
 			</div>
-			<div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-white hover:bg-pink-700 transition duration-700 hover:text-white dark:text-gray-800">
+			<div data-aos="fade-down" className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-white hover:bg-pink-700 transition duration-700 hover:text-white dark:text-gray-800">
 				<img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full dark:bg-gray-500" src={tImg5} />
 				<div className="flex-1 my-4">
 					<p className="text-xl font-semibold leadi">Viral Kohli</p>
@@ -163,7 +172,7 @@ const Team = () => {
 					</a>
 				</div>
 			</div>
-			<div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-white hover:bg-pink-700 transition duration-700 hover:text-white dark:text-gray-800">
+			<div data-aos="fade-left" className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 dark:bg-white hover:bg-pink-700 transition duration-700 hover:text-white dark:text-gray-800">
 				<img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center bg-cover rounded-full dark:bg-gray-500" src={tImg6} />
 				<div className="flex-1 my-4">
 					<p className="text-xl font-semibold leadi">Babar Azam</p>

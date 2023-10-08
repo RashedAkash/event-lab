@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 const Service = ({ service }) => {
  
-  const { id, name, image, price, description } = service;
+   
+    const { id, name, image, price, description } = service;
+      useEffect(() => {
+    AOS.init(
+      { duration: 2000 },
+      { offset: 300, }
+    );
+  }, []);
   return (
     <div className=''>
       
-<div className="w-full max-w-sm bg-white border hover:border-pink-700 rounded-lg shadow  hover:scale-105 duration-300 ">
+<div data-aos="fade-up" className="w-full max-w-sm bg-white border hover:border-pink-700 rounded-lg shadow  hover:scale-105 duration-300 ">
     <a href="#">
         <img className="p-8 rounded-t-lg hover:scale-105 duration-300 " src={image} alt="product image" />
     </a>
